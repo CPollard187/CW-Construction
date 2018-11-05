@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CW Construction</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="companyName">CW Construction</string>
+    <string name="hours">Hours</string>
+    <string name="hourTimes">Monday - Friday 7AM - 4PM</string>
+    <string name="socialMedia">Social Media</string>
+    <string name="companyBlurb">CW Construction is the best construction crew in the city. We employ 4 passionate workers that love meeting your construction needs</string>
+
+
+</resources>
