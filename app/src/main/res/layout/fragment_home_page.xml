@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,39 +12,43 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:gravity="center_vertical|center_horizontal"
-        android:text="@string/companyName" />
+        android:text="@string/companyName"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/titles"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/blurb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:gravity="center_vertical|center_horizontal"
-        android:text="@string/companyBlurb" />
+        android:text="@string/companyBlurb"
+        android:textSize="@dimen/info" />
 
     <TextView
         android:id="@+id/hours"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:gravity="center_vertical|center_horizontal"
-        android:text="@string/hours" />
+        android:text="@string/hours"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/hourTimes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="@string/hourTimes" />
+        android:gravity="center_horizontal"
+        android:text="@string/hourTimes"
+        android:textSize="@dimen/info" />
 
     <TextView
         android:id="@+id/socialMedia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:gravity="center_vertical|center_horizontal"
-        android:text="@string/socialMedia" />
+        android:text="@string/socialMedia"
+        android:textSize="@dimen/subTitles" />
 </LinearLayout>
