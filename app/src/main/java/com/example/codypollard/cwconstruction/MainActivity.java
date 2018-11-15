@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.content, new HomePageFragment(), "Home");
+        transaction.commit();
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,20 +95,20 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         FragmentTransaction transaction = fm.beginTransaction();
 
-        if (id == R.id.nav_pc) {
-            transaction.replace(R.id.content, new HomePageFragment(), "PC");
+        if (id == R.id.nav_home) {
+            transaction.replace(R.id.content, new HomePageFragment(), "Home");
             transaction.commit();
-        } else if (id == R.id.nav_ps4) {
-            transaction.replace(R.id.content, new AboutFragment(), "PS4");
+        } else if (id == R.id.nav_about) {
+            transaction.replace(R.id.content, new AboutFragment(), "About");
             transaction.commit();
-        } else if (id == R.id.nav_xbox) {
-            transaction.replace(R.id.content, new OurWorkFragment(), "Xbox");
+        } else if (id == R.id.nav_ourwork) {
+            transaction.replace(R.id.content, new OurWorkFragment(), "Our Work");
             transaction.commit();
-        } else if (id == R.id.nav_mobile) {
-            transaction.replace(R.id.content, new ContactFragment(), "Mobile");
+        } else if (id == R.id.nav_quote) {
+            transaction.replace(R.id.content, new QuoteFragment(), "Quote");
             transaction.commit();
-        } else if (id == R.id.nav_vr) {
-            transaction.replace(R.id.content, new QuoteFragment(), "VR");
+        } else if (id == R.id.nav_contact) {
+            transaction.replace(R.id.content, new ContactFragment(), "Contact");
             transaction.commit();
         }
 

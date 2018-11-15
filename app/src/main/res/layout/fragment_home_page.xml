@@ -61,7 +61,7 @@
         android:maxWidth="42dp"
         android:maxHeight="42dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/faceLogo" />
+        android:src="@drawable/facelogo" />
 
     <ImageButton
         android:id="@+id/twitButton"
@@ -71,7 +71,7 @@
         android:maxWidth="42dp"
         android:maxHeight="42dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/twitLogo" />
+        android:src="@drawable/twitlogo" />
 
     <ImageButton
         android:id="@+id/instaButton"
@@ -81,6 +81,6 @@
         android:maxWidth="42dp"
         android:maxHeight="42dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/instaLogo" />
+        android:src="@drawable/instalogo" />
 
 </LinearLayout>
