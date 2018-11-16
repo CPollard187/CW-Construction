@@ -80,7 +80,7 @@ public class HomePageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Uri web = Uri.parse("https://twitter.com/");
-                //Intent intent = Intent(Intent.ACTION_VIEW, web);
+                Intent intent = Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }
@@ -97,7 +97,7 @@ public class HomePageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Uri web = Uri.parse("https://www.facebook.com/");
-                //Intent intent = Intent(Intent.ACTION_VIEW, web);
+                Intent intent = Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }
@@ -114,7 +114,7 @@ public class HomePageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Uri web = Uri.parse("https://www.instagram.com/");
-                //Intent intent = Intent(Intent.ACTION_VIEW, web);
+                Intent intent = Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }
