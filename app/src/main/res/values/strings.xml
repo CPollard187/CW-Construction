@@ -12,6 +12,9 @@
     <string name="hourTimes">Monday - Friday 7AM - 4PM</string>
     <string name="socialMedia">Social Media</string>
     <string name="companyBlurb">CW Construction is the best construction crew in the city. We employ 4 passionate workers that love meeting your construction needs</string>
-
+    <string name="titleAbout">About CW Construction</string>
+    <string name="about1">Privately owned company that was founded in 2012 by owners Cody and Wilson</string>
+    <string name="about2">The company offers many types of skilled trades such as roofing,demolition,remodeling and so on</string>
+    <string name="about3">We\'ve completed hundreds of jobs in the Windsor,ON area and surrounding areas</string>
 
 </resources>
