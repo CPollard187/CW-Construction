@@ -78,6 +78,10 @@ public class DatePickerFragment extends DialogFragment
         fragment.setArguments(args);
         return fragment;
     }
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "Date Picker");
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
