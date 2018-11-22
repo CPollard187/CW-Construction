@@ -7,29 +7,62 @@
     tools:context=".QuoteFragment">
 
     <SeekBar
+        android:id="@+id/widthSeekBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/mesurementSeekBar"
+        android:padding="50dp"
+        android:layout_weight="1"
         android:max="100"
-        android:min="0"/>
+        android:min="0" />
+
+    <TextView
+        android:id="@+id/widthCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Width: 0 Feet"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/lengthSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="50dp"
+        android:layout_weight="1"
+        android:max="100"
+        android:min="0" />
+
+    <TextView
+        android:id="@+id/lengthCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Length 0 Feet"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <Spinner
         android:id="@+id/materialDropDown"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
+
     <Spinner
         android:id="@+id/problemDropDown"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
+
     <EditText
         android:id="@+id/descriptionBox"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:inputType="text"/>
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
     <EditText
         android:id="@+id/dateAvailableBox"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:inputType="text"/>
+        android:layout_height="wrap_content"
+        android:inputType="text" />
 
 
 </LinearLayout>
