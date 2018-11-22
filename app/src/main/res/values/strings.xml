@@ -13,5 +13,11 @@
     <string name="socialMedia">Social Media</string>
     <string name="companyBlurb">CW Construction is the best construction crew in the city. We employ 4 passionate workers that love meeting your construction needs</string>
 
+    <string-array name="material_array">
+        <item>Cheap</item>
+        <item>Good</item>
+        <item>Great</item>
+        <item>Amazing</item>
+    </string-array>
 
 </resources>
