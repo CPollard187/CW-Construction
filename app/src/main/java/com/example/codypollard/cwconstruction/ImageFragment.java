@@ -4,52 +4,50 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+/**
+ * Create a fragment fo the viewPager
+ */
+
+/**
+ * Then, Clean up the new instance and additional arguments in the ImageFragment
+ */
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link OurWorkFragment.OnFragmentInteractionListener} interface
+ * {@link ImageFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link OurWorkFragment#newInstance} factory method to
+ * Use the {@link ImageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OurWorkFragment extends Fragment {
+public class ImageFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
-    public OurWorkFragment() {
+    public ImageFragment() {
         // Required empty public constructor
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
      * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment OurWorkFragment.
+     * @return A new instance of fragment ImageFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static OurWorkFragment newInstance(String param1, String param2) {
-        OurWorkFragment fragment = new OurWorkFragment();
+    public static ImageFragment newInstance(String param1) {
+        ImageFragment fragment = new ImageFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -59,54 +57,25 @@ public class OurWorkFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
     /**
-     * Attach the viewpager and the adapter
+     * Combine newInstance (mparam1) and the textView workView
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_our_work, container, false);
-        CustomAdapter adapter = new CustomAdapter(getChildFragmentManager());
-        ViewPager viewPager = (ViewPager) view.findViewById(R.id.workContent);
-        viewPager.setAdapter(adapter);
+        View view = inflater.inflate(R.layout.fragment_image, container, false);
+
+        TextView workview = (TextView) view.findViewById(R.id.workView);
+        if(mParam1 != null){
+            workview.setText(mParam1);
+        }
 
         return view;
     }
-
-    /**
-     * Create a FragmentPagerAdapter
-     */
-    public class CustomAdapter extends FragmentPagerAdapter{
-
-        public CustomAdapter(FragmentManager fm){
-            super(fm);
-        }
-
-        /**
-         * populate the new instance parameters
-         */
-        public Fragment getItem(int position){
-            switch(position){
-                case 0: return ImageFragment.newInstance("Image 0");
-                case 1: return ImageFragment.newInstance("Image 1");
-                case 2: return ImageFragment.newInstance("Image 2");
-                case 3: return ImageFragment.newInstance("Image 3");
-                case 4: return ImageFragment.newInstance("Image 4");
-                default: return ImageFragment.newInstance("Image 5");
-            }
-        }
-
-        public int getCount(){
-            return 5;
-        }
-
-    }
-
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

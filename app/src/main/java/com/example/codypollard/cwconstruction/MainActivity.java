@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity
         OurWorkFragment.OnFragmentInteractionListener,
         ContactFragment.OnFragmentInteractionListener,
         QuoteFragment.OnFragmentInteractionListener,
+        ImageFragment.OnFragmentInteractionListener,
         AboutFragment.OnFragmentInteractionListener{
 
     FragmentManager fm = getSupportFragmentManager();
@@ -103,6 +105,7 @@ public class MainActivity extends AppCompatActivity
             transaction.commit();
         } else if (id == R.id.nav_ourwork) {
             transaction.replace(R.id.content, new OurWorkFragment(), "Our Work");
+            transaction.addToBackStack(null);
             transaction.commit();
         } else if (id == R.id.nav_quote) {
             transaction.replace(R.id.content, new QuoteFragment(), "Quote");
