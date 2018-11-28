@@ -53,34 +53,43 @@
         android:textSize="@dimen/subTitles"
         android:textStyle="bold" />
 
-    <ImageButton
-        android:id="@+id/faceButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxWidth="42dp"
-        android:maxHeight="42dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/facelogo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/twitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxWidth="42dp"
-        android:maxHeight="42dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/twitlogo" />
+        <ImageButton
+            android:id="@+id/twitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitlogo" />
 
-    <ImageButton
-        android:id="@+id/instaButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxWidth="42dp"
-        android:maxHeight="42dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/instalogo" />
+        <ImageButton
+            android:id="@+id/instaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/instalogo" />
+
+        <ImageButton
+            android:id="@+id/faceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/facelogo" />
+    </LinearLayout>
 
 </LinearLayout>
