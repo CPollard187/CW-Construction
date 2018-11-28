@@ -1,68 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".QuoteFragment">
 
-    <SeekBar
-        android:id="@+id/widthSeekBar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="50dp"
-        android:layout_weight="1"
-        android:max="100"
-        android:min="0" />
+    <!--<SeekBar-->
+    <!--android:id="@+id/widthSeekBar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="50dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:max="100"-->
+    <!--android:min="0" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/widthCount"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="Width: 0 Feet"-->
+    <!--android:textSize="24sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<SeekBar-->
+    <!--android:id="@+id/lengthSeekBar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="50dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:max="100"-->
+    <!--android:min="0" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/lengthCount"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="Length 0 Feet"-->
+    <!--android:textSize="24sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/materialDropDown"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/problemDropDown"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/descriptionBox"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:inputType="text" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/pick_date"-->
+    <!--android:onClick="showDatePickerDialog" />-->
+
 
     <TextView
-        android:id="@+id/widthCount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Width: 0 Feet"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <SeekBar
-        android:id="@+id/lengthSeekBar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="50dp"
-        android:layout_weight="1"
-        android:max="100"
-        android:min="0" />
-
-    <TextView
-        android:id="@+id/lengthCount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Length 0 Feet"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/materialDropDown"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
-
-    <Spinner
-        android:id="@+id/problemDropDown"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/descriptionBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text" />
-
-    <Button
+        android:id="@+id/quoteTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pick_date"
-        android:onClick="showDatePickerDialog" />
+        android:layout_marginStart="75dp"
+        android:text="@string/quoteTitle"
+        android:textAlignment="center"
+        android:textSize="@dimen/titles"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/areaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="15dp"
+        android:text="Area"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/lengthBox"
+        android:layout_width="126dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Length"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/widthBox"
+        android:layout_width="126dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Width"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/materialType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="15dp"
+        android:text="@string/material"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/materialBox"
+        android:layout_width="124dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Luxury"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/problemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="215dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="15dp"
+        android:text="@string/problem"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/problemBox"
+        android:layout_width="184dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="212dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Remodel"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="15dp"
+        android:text="@string/Date"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dateBox"
+        android:layout_width="143dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="279dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="325dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="15dp"
+        android:text="@string/Description"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/descBox"
+        android:layout_width="266dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="In need of a new kitchen"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
+
+</android.support.constraint.ConstraintLayout>

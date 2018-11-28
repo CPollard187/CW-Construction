@@ -36,6 +36,11 @@
     <string name="about1">Privately owned company that was founded in 2012 by owners Cody and Wilson</string>
     <string name="about2">The company offers many types of skilled trades such as roofing,demolition,remodeling and so on</string>
     <string name="about3">We\'ve completed hundreds of jobs in the Windsor,ON area and surrounding areas</string>
+    <string name="quoteTitle">Request A Quote</string>
+    <string name="material">Material Type</string>
+    <string name="problem">Problem</string>
+    <string name="Description">Description</string>
+    <string name="Date">Date Available</string>
 
 
 </resources>
