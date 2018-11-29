@@ -79,52 +79,52 @@ public class HomePageFragment extends Fragment {
         twitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Uri web = Uri.parse("https://twitter.com/");
-//                //Intent intent = Intent(Intent.ACTION_VIEW, web);
-//                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-//                    startActivity(intent);
-//                }
-//                else{
-//                    Toast.makeText(getContext(),
-//                            "Incorrect software",
-//                            Toast.LENGTH_SHORT).show();
-//                }
+                Uri web = Uri.parse("https://twitter.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         //Facebook Button That Will Send you to the facebook website
-//        faceButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Uri web = Uri.parse("https://www.facebook.com/");
-//                Intent intent = Intent(Intent.ACTION_VIEW, web);
-//                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-//                    startActivity(intent);
-//                }
-//                else{
-//                    Toast.makeText(getContext(),
-//                            "Incorrect software",
-//                            Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//
+        faceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://www.facebook.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 //        //Instagram Button That Will Send you to the instagram website
-//        instaButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Uri web = Uri.parse("https://www.instagram.com/");
-//                Intent intent = Intent(Intent.ACTION_VIEW, web);
-//                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-//                    startActivity(intent);
-//                }
-//                else{
-//                    Toast.makeText(getContext(),
-//                            "Incorrect software",
-//                            Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
+        instaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://www.instagram.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+               if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         return view;
 

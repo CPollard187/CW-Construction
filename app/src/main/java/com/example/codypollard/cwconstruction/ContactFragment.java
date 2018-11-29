@@ -1,12 +1,15 @@
 package com.example.codypollard.cwconstruction;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 /**
@@ -64,7 +67,149 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact, container, false);
+        ImageButton twitButton = (ImageButton) view.findViewById(R.id.twitButton);
+        ImageButton twitButton2 = (ImageButton) view.findViewById(R.id.twitButton2);
+        ImageButton email = (ImageButton) view.findViewById(R.id.email);
+        ImageButton email2 = (ImageButton) view.findViewById(R.id.email2);
+        ImageButton webButton = (ImageButton) view.findViewById(R.id.webButton);
+        ImageButton webButton2 = (ImageButton) view.findViewById(R.id.webButton2);
+        ImageButton phoneButton = (ImageButton) view.findViewById(R.id.phoneButton);
+        ImageButton phoneButton2 = (ImageButton) view.findViewById(R.id.phoneButton);
+
+        //Twitter Button That Will Send you to the twitter website
+        twitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://twitter.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //Facebook Button That Will Send you to the facebook website
+        twitButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://www.twitter.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, "cody.pollard01@stclairconnect.ca");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "CW Construction");
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello Cody, ");
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        email2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, "wilson.paz01@stclairconnect.ca");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "CW Construction");
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello Wilson, ");
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("tel:5191234567"));
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        phoneButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("tel:5191234567"));
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+//        //Instagram Button That Will Send you to the instagram website
+        webButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://www.google.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        webButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://www.google.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
