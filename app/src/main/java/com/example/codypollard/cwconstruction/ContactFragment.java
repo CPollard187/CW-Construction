@@ -110,6 +110,72 @@ public class ContactFragment extends Fragment {
                 }
             }
         });
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, "cody.pollard01@stclairconnect.ca");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "CW Construction");
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello Cody, ");
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        email2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, "wilson.paz01@stclairconnect.ca");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "CW Construction");
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello Wilson, ");
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("tel:5191234567"));
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        phoneButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("tel:5191234567"));
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "You do not have the correct software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 //        //Instagram Button That Will Send you to the instagram website
         webButton.setOnClickListener(new View.OnClickListener() {
