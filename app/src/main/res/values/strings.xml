@@ -28,9 +28,9 @@
     </string-array>
 
 
-<string name="cody">Cody Pollard</string>
+    <string name="cody">Cody Pollard</string>
     <string name="wilson">Wilson Paz</string>
-<string name="role">Manager</string>
+    <string name="role">Manager</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="titleAbout">About CW Construction</string>
     <string name="about1">Privately owned company that was founded in 2012 by owners Cody and Wilson</string>
