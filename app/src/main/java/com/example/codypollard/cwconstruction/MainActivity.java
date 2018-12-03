@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity
         OurWorkFragment.OnFragmentInteractionListener,
         ContactFragment.OnFragmentInteractionListener,
         QuoteFragment.OnFragmentInteractionListener,
-        ImageFragment.OnFragmentInteractionListener,
         AboutFragment.OnFragmentInteractionListener,
         UpdatedContactFragment.OnFragmentInteractionListener{
 
