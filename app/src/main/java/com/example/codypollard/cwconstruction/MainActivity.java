@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity
         OurWorkFragment.OnFragmentInteractionListener,
         ContactFragment.OnFragmentInteractionListener,
         QuoteFragment.OnFragmentInteractionListener,
-        ImageFragment.OnFragmentInteractionListener,
-        AboutFragment.OnFragmentInteractionListener{
+        AboutFragment.OnFragmentInteractionListener,
+        UpdatedContactFragment.OnFragmentInteractionListener{
 
     FragmentManager fm = getSupportFragmentManager();
 
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity
             transaction.replace(R.id.content, new QuoteFragment(), "Quote");
             transaction.commit();
         } else if (id == R.id.nav_contact) {
-            transaction.replace(R.id.content, new ContactFragment(), "Contact");
+            transaction.replace(R.id.content, new UpdatedContactFragment(), "Contact");
             transaction.commit();
         }
 
