@@ -41,6 +41,8 @@
     <string name="problem">Problem</string>
     <string name="Description">Description</string>
     <string name="Date">Date Available</string>
+    <string name="switch_title">Settings switch</string>
+    <string name="switch_summary">Enable or disable this option</string>
 
 
 </resources>
