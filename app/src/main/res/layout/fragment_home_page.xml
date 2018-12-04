@@ -58,7 +58,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/twitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,20 +67,20 @@
             android:maxWidth="42dp"
             android:maxHeight="42dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/twitlogo" />
+            android:src="@drawable/Twitter_Social_Icon_Square_Color" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/instaButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:cropToPadding="true"
             android:maxWidth="42dp"
             android:maxHeight="42dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/instalogo" />
+            android:src="@drawable/instagram" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/faceButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             android:maxWidth="42dp"
             android:maxHeight="42dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/facelogo" />
+            android:src="@drawable/facebook" />
     </LinearLayout>
 
 </LinearLayout>

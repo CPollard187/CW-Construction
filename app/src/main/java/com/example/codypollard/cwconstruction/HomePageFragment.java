@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -71,9 +72,9 @@ public class HomePageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
-        ImageButton twitButton = (ImageButton) view.findViewById(R.id.twitButton);
-        ImageButton faceButton = (ImageButton) view.findViewById(R.id.faceButton);
-        ImageButton instaButton = (ImageButton) view.findViewById(R.id.instaButton);
+        ImageView twitButton = (ImageView) view.findViewById(R.id.twitButton);
+        ImageView faceButton = (ImageView) view.findViewById(R.id.faceButton);
+        ImageView instaButton = (ImageView) view.findViewById(R.id.instaButton);
 
         //Twitter Button That Will Send you to the twitter website
         twitButton.setOnClickListener(new View.OnClickListener() {
