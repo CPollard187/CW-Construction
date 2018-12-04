@@ -67,7 +67,7 @@
             android:maxWidth="42dp"
             android:maxHeight="42dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/Twitter_Social_Icon_Square_Color" />
+            android:src="@drawable/twitter"/>
 
         <ImageView
             android:id="@+id/instaButton"

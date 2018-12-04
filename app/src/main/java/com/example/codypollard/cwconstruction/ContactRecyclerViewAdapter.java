@@ -57,14 +57,30 @@ public class ContactRecyclerViewAdapter extends RecyclerView.Adapter {
                     Intent intent = new Intent(Intent.ACTION_SENDTO);
                     intent.setData(Uri.parse("mailto:"));
                     intent.putExtra(Intent.EXTRA_EMAIL, emailAddresses);
-                    intent.putExtra(Intent.EXTRA_SUBJECT, "Question From the MAD App");
-                    intent.putExtra(Intent.EXTRA_TEXT, "I have a question about ...");
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Question About CW Construction");
+                    intent.putExtra(Intent.EXTRA_TEXT, "I have a question about  CW Construction...");
                     if(intent.resolveActivity(context.getPackageManager()) != null){
                         context.startActivity(intent);
                     }
                     else{
                         Toast.makeText(context,
-                                "You do not have the correct software",
+                                "Incorrect software",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+            ((CustomViewHolder) holder).phone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String [] phoneNumbers = {contact.getPhoneNumber()};
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse("tel:" + phoneNumbers));
+                    if(intent.resolveActivity(context.getPackageManager()) != null){
+                        context.startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(context,
+                                "Incorrect software",
                                 Toast.LENGTH_SHORT).show();
                     }
                 }
