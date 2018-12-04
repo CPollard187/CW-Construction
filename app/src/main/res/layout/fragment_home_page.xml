@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="20dp"
         android:text="@string/companyBlurb"
         android:textSize="@dimen/info" />
 
@@ -41,6 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
         android:text="@string/hourTimes"
         android:textSize="@dimen/info" />
 
@@ -48,6 +50,7 @@
         android:id="@+id/socialMedia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/socialMedia"
         android:textSize="@dimen/subTitles"
@@ -56,40 +59,40 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/twitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:maxWidth="42dp"
-            android:maxHeight="42dp"
+            android:maxWidth="75dp"
+            android:maxHeight="75dp"
+            android:paddingRight="30dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/twitlogo" />
+            android:src="@drawable/twitter" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/instaButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:maxWidth="42dp"
-            android:maxHeight="42dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/instalogo" />
+            android:cropToPadding="true"
+            android:maxWidth="75dp"
+            android:maxHeight="75dp"
+            android:paddingRight="30dp"
+            android:src="@drawable/instagram" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/faceButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:maxWidth="42dp"
-            android:maxHeight="42dp"
+            android:maxWidth="45dp"
+            android:maxHeight="45dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/facelogo" />
+            android:src="@drawable/facebook" />
     </LinearLayout>
 
 </LinearLayout>
