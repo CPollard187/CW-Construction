@@ -142,6 +142,7 @@ public class QuoteFragment extends Fragment {
         final EditText material = (EditText) view.findViewById(R.id.materialBox);
         final EditText date = (EditText) view.findViewById(R.id.dateBox);
         final EditText desc = (EditText) view.findViewById(R.id.descBox);
+        final EditText name = (EditText) view.findViewById(R.id.nameBox);
         Button email = (Button) view.findViewById(R.id.sendEmailButton);
 
         email.setOnClickListener(new View.OnClickListener() {
@@ -151,7 +152,7 @@ public class QuoteFragment extends Fragment {
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, "cwconstruction@hotmail.com");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Quote Request");
-                intent.putExtra(Intent.EXTRA_TEXT, "Hello, I'm requesting a quote from your app 'CW Construction'. I have a "
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello, I'm " + name + " and I'm requesting a quote from your app 'CW Construction'. I have a "
                                                             + problem + " that needs to be done. It is a " + length + " by " + width
                                                             + " foot area. I would like the material used to be " + material + ". "
                                                             + "I'm available " + date + " Additional Instructions: " + desc + " Thank you!");

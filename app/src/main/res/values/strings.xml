@@ -43,6 +43,8 @@
     <string name="Date">Date Available</string>
     <string name="switch_title">Settings switch</string>
     <string name="switch_summary">Enable or disable this option</string>
+    <string name="Other">Other</string>
+    <string name="personName">Full Name</string>
 
 
 </resources>
