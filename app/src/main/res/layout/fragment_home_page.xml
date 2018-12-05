@@ -12,6 +12,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/companyName"
         android:textColor="@android:color/black"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal"
         android:paddingBottom="20dp"
+        android:fontFamily="@font/ubunturegular"
         android:text="@string/companyBlurb"
         android:textSize="@dimen/info" />
 
@@ -34,6 +36,7 @@
         android:layout_weight="0"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/hours"
+        android:fontFamily="@font/ubunturegular"
         android:textSize="@dimen/subTitles"
         android:textStyle="bold" />
 
@@ -43,6 +46,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:paddingBottom="20dp"
+        android:fontFamily="@font/ubunturegular"
         android:text="@string/hourTimes"
         android:textSize="@dimen/info" />
 
@@ -51,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="20dp"
+        android:fontFamily="@font/ubunturegular"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/socialMedia"
         android:textSize="@dimen/subTitles"
