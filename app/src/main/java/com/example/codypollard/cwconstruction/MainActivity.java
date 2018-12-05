@@ -29,8 +29,10 @@ public class MainActivity extends AppCompatActivity
         OurWorkFragment.OnFragmentInteractionListener,
         ContactFragment.OnFragmentInteractionListener,
         QuoteFragment.OnFragmentInteractionListener,
-        ImageFragment.OnFragmentInteractionListener,
-        AboutFragment.OnFragmentInteractionListener {
+        AboutFragment.OnFragmentInteractionListener,
+        UpdatedContactFragment.OnFragmentInteractionListener,
+        CreditFragment.OnFragmentInteractionListener{
+
 
     FragmentManager fm = getSupportFragmentManager();
 
@@ -58,15 +60,6 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(R.id.content, new HomePageFragment(), "Home");
         transaction.commit();
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -172,21 +165,38 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         FragmentTransaction transaction = fm.beginTransaction();
 
+
         if (id == R.id.nav_home) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                                            R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new HomePageFragment(), "Home");
             transaction.commit();
         } else if (id == R.id.nav_about) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new AboutFragment(), "About");
             transaction.commit();
         } else if (id == R.id.nav_ourwork) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new OurWorkFragment(), "Our Work");
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (id == R.id.nav_quote) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new QuoteFragment(), "Quote");
             transaction.commit();
         } else if (id == R.id.nav_contact) {
-            transaction.replace(R.id.content, new ContactFragment(), "Contact");
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
+            transaction.replace(R.id.content, new UpdatedContactFragment(), "Contact");
+            transaction.commit();
+        }
+        else if (id == R.id.nav_credits) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
+            transaction.replace(R.id.content, new CreditFragment(), "Credits");
             transaction.commit();
         }
 

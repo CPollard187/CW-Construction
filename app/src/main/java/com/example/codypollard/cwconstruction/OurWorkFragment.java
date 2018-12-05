@@ -4,8 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +23,12 @@ public class OurWorkFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    //Declare view pager
+    ViewPager viewPager;
+    //put the images into an array list
+    int images[] = {R.drawable.house2, R.drawable.kitchen, R.drawable.bathroom, R.drawable.roof, R.drawable.home};
+    MyCustomPagerAdapter myCustomPagerAdapter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -63,50 +67,19 @@ public class OurWorkFragment extends Fragment {
         }
     }
 
-    /**
-     * Attach the viewpager and the adapter
-     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_our_work, container, false);
-        CustomAdapter adapter = new CustomAdapter(getChildFragmentManager());
-        ViewPager viewPager = (ViewPager) view.findViewById(R.id.workContent);
-        viewPager.setAdapter(adapter);
+        //Get the viewpager
+        viewPager = (ViewPager)view.findViewById(R.id.viewPager);
+        //get the adapter and set it to the view pager
+        myCustomPagerAdapter = new MyCustomPagerAdapter(getContext(), images);
+        viewPager.setAdapter(myCustomPagerAdapter);
 
         return view;
     }
-
-    /**
-     * Create a FragmentPagerAdapter
-     */
-    public class CustomAdapter extends FragmentPagerAdapter{
-
-        public CustomAdapter(FragmentManager fm){
-            super(fm);
-        }
-
-        /**
-         * populate the new instance parameters
-         */
-        public Fragment getItem(int position){
-            switch(position){
-                case 0: return ImageFragment.newInstance("Image 0");
-                case 1: return ImageFragment.newInstance("Image 1");
-                case 2: return ImageFragment.newInstance("Image 2");
-                case 3: return ImageFragment.newInstance("Image 3");
-                case 4: return ImageFragment.newInstance("Image 4");
-                default: return ImageFragment.newInstance("Image 5");
-            }
-        }
-
-        public int getCount(){
-            return 5;
-        }
-
-    }
-
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

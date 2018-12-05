@@ -69,22 +69,70 @@
         android:id="@+id/quoteTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
+        android:layout_marginStart="60dp"
+        android:fontFamily="@font/ubunturegular"
         android:text="@string/quoteTitle"
         android:textAlignment="center"
+
+        android:textColor="@color/vpi__background_holo_dark"
         android:textSize="@dimen/titles"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:padding="15dp"
+        android:text="@string/personName"
+        android:fontFamily="@font/ubunturegular"
+
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameBox"
+        android:layout_width="126dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:fontFamily="@font/ubunturegular"
+
+        android:gravity="center"
+        android:hint="John Doe"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/areaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/ubunturegular"
         android:gravity="center_vertical|center_horizontal"
         android:padding="15dp"
+
         android:text="Area"
         android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="157dp"
+        android:fontFamily="@font/ubunturegular"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="15dp"
+        android:text="(feet)"
+        android:textAlignment="center"
+        android:textSize="@dimen/feet"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -92,11 +140,13 @@
         android:layout_width="126dp"
         android:layout_height="63dp"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="125dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Length"
         android:inputType="text"
+        android:fontFamily="@font/ubunturegular"
+
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -106,11 +156,13 @@
         android:layout_width="126dp"
         android:layout_height="63dp"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="125dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Width"
         android:inputType="text"
+        android:fontFamily="@font/ubunturegular"
+
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -119,12 +171,14 @@
         android:id="@+id/materialType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="192dp"
+        android:fontFamily="@font/ubunturegular"
         android:gravity="center_vertical|center_horizontal"
         android:padding="15dp"
         android:text="@string/material"
         android:textAlignment="center"
         android:textSize="30sp"
+
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -132,10 +186,12 @@
         android:layout_width="124dp"
         android:layout_height="59dp"
         android:layout_marginStart="208dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="190dp"
         android:ems="10"
+        android:fontFamily="@font/ubunturegular"
         android:gravity="center"
         android:hint="Luxury"
+
         android:inputType="text"
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,11 +201,13 @@
         android:id="@+id/problemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="215dp"
+        android:layout_marginTop="245dp"
         android:gravity="center_vertical|center_horizontal"
         android:padding="15dp"
         android:text="@string/problem"
         android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
+
         android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -158,12 +216,14 @@
         android:layout_width="184dp"
         android:layout_height="59dp"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="242dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Remodel"
         android:inputType="text"
         android:padding="15dp"
+        android:fontFamily="@font/ubunturegular"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -171,11 +231,12 @@
         android:id="@+id/dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="300dp"
         android:gravity="center_vertical|center_horizontal"
         android:padding="15dp"
         android:text="@string/Date"
         android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
         android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -184,11 +245,13 @@
         android:layout_width="143dp"
         android:layout_height="46dp"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="279dp"
+        android:layout_marginTop="309dp"
         android:ems="10"
         android:hint="01/01/2018"
         android:inputType="date"
         android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -196,37 +259,44 @@
         android:id="@+id/descText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="355dp"
         android:gravity="center_vertical|center_horizontal"
         android:padding="15dp"
-        android:text="@string/Description"
+        android:text="@string/Other"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:fontFamily="@font/ubunturegular"
+
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/descBox"
         android:layout_width="266dp"
         android:layout_height="60dp"
-        android:layout_marginTop="384dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="355dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
+        android:fontFamily="@font/ubunturegular"
+
         android:gravity="center"
-        android:hint="In need of a new kitchen"
+        android:hint="Additional Information"
         android:inputType="text"
         android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24000001" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/sendEmailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="270dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/roundedbutton"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:fontFamily="@font/ubunturegular"
         android:text="Send Quote"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quoteTitle" />
 
