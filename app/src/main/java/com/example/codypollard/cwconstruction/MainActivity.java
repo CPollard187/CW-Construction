@@ -45,14 +45,6 @@ public class MainActivity extends AppCompatActivity
         loadLanguage();
         setContentView(R.layout.activity_main);
 
-//        TextView currentLang = (TextView) findViewById(R.id.currentLang);
-//
-//        if (getLangCode().contentEquals("en")) {
-//            currentLang.setText("English");
-//        } else if (getLangCode().contentEquals("fr")) {
-//            // default
-//            currentLang.setText("French");
-//        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -72,41 +64,30 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void saveLanguage(String lang) {
-
-
-        // we can use this method to save language
+        // save the current language
         SharedPreferences preferences = getSharedPreferences(STORED_LANG, MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(DEFAULT_LANG, lang);
-        editor.apply();
-        // we have saved
-        // recreate activity after saving to load the new language, this is the same
-        // as refreshing activity to load new language
-
+        SharedPreferences.Editor edit = preferences.edit();
+        edit.putString(DEFAULT_LANG, lang);
+        edit.apply();
         recreate();
 
     }
 
     private void loadLanguage() {
-        // we can use this method to load language,
-        // this method should be called before setContentView() method of the onCreate method
-
-        Locale locale = new Locale(getLangCode());
+        //used to load language (method)
+        Locale locale = new Locale(getLang());
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
-    private String getLangCode() {
-        SharedPreferences preferences = getSharedPreferences(STORED_LANG, MODE_PRIVATE);
-        String langCode = preferences.getString(DEFAULT_LANG, "en");
-        // save english 'en' as the default language
-        return langCode;
+    private String getLang() {
+        //get language (method)
+        SharedPreferences pref = getSharedPreferences(STORED_LANG, MODE_PRIVATE);
+        String langName = pref.getString(DEFAULT_LANG, "en");
+        return langName;
     }
-
-
-
 
 
     @Override
@@ -135,14 +116,6 @@ public class MainActivity extends AppCompatActivity
 
 
         int id = item.getItemId();
-
-
-        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            Intent intent = new Intent(this, SettingsActivity.class);
-//            startActivity(intent);
-//            return true;
-//        }
 
         if (id == R.id.action_english){
             saveLanguage("en");
