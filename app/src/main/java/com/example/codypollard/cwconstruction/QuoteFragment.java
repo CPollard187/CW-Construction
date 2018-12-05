@@ -171,13 +171,13 @@ public class QuoteFragment extends Fragment {
                 final String date = dateText.getText().toString();
                 final String desc = descText.getText().toString();
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:"));
+                intent.setData(Uri.parse("mailto: cwconstruction@hotmail.com"));
                 intent.putExtra(Intent.EXTRA_EMAIL, "cwconstruction@hotmail.com");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Quote Request");
                 intent.putExtra(Intent.EXTRA_TEXT, "Hello, I'm " + name + " and I'm requesting a quote from your app 'CW Construction'. I have a "
                                                             + problem + " that needs to be done. It is a " + length + " by " + width
                                                             + " foot area. I would like the material used to be " + material + ". "
-                                                            + "I'm available " + date + " Additional Instructions: " + desc + ". Thank you!");
+                                                            + "I'm available - " + date + ". Additional Instructions: " + desc + ". Thank you!");
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }

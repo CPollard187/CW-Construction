@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreditFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/credits"
+        android:textAlignment="center"
+        android:textColor="@color/vpi__background_holo_dark"
+        android:textSize="@dimen/titles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/imagesUsed"
+        android:textAlignment="center"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://pixabay.com/en/architecture-family-house-front-yard-1836070/"
+        android:textAlignment="center"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/image2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://pixabay.com/en/kitchen-home-interior-modern-room-2165756/"
+        android:textAlignment="center"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/image3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://pixabay.com/en/window-house-home-house-window-1800575/"
+        android:textAlignment="center"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/images4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://pixabay.com/en/remodeling-kitchen-remodel-1241040/"
+        android:textAlignment="center"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/image5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://pixabay.com/en/home-covered-porch-picket-fence-2119484/"
+        android:textAlignment="center"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fontUsed"
+        android:textAlignment="center"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ubuntu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ubuntu"
+        android:textAlignment="center"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/developers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/developers"
+        android:textAlignment="center"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cody"
+        android:textAlignment="center"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/wilson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wilson"
+        android:textAlignment="center"
+        android:textSize="@dimen/info" />
+</LinearLayout>

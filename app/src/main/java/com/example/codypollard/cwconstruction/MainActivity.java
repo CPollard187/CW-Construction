@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity
         ContactFragment.OnFragmentInteractionListener,
         QuoteFragment.OnFragmentInteractionListener,
         AboutFragment.OnFragmentInteractionListener,
-        UpdatedContactFragment.OnFragmentInteractionListener{
+        UpdatedContactFragment.OnFragmentInteractionListener,
+        CreditFragment.OnFragmentInteractionListener{
 
     FragmentManager fm = getSupportFragmentManager();
 
@@ -117,6 +118,12 @@ public class MainActivity extends AppCompatActivity
             transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
                     R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new UpdatedContactFragment(), "Contact");
+            transaction.commit();
+        }
+        else if (id == R.id.nav_credits) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
+            transaction.replace(R.id.content, new CreditFragment(), "Credits");
             transaction.commit();
         }
 
