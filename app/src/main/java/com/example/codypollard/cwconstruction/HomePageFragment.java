@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -75,6 +76,61 @@ public class HomePageFragment extends Fragment {
         ImageView twitButton = (ImageView) view.findViewById(R.id.twitButton);
         ImageView faceButton = (ImageView) view.findViewById(R.id.faceButton);
         ImageView instaButton = (ImageView) view.findViewById(R.id.instaButton);
+        TextView address = (TextView) view.findViewById(R.id.address);
+        TextView address2 = (TextView) view.findViewById(R.id.adress2);
+        TextView address3 = (TextView) view.findViewById(R.id.address3);
+
+        address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        address3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        address2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
         //Twitter Button That Will Send you to the twitter website
         twitButton.setOnClickListener(new View.OnClickListener() {

@@ -23,8 +23,9 @@
         android:id="@+id/blurb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="10dp"
         android:gravity="center_vertical|center_horizontal"
-        android:paddingBottom="20dp"
+        android:paddingBottom="15dp"
         android:fontFamily="@font/ubunturegular"
         android:text="@string/companyBlurb"
         android:textSize="@dimen/info" />
@@ -45,16 +46,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:paddingBottom="20dp"
+        android:paddingBottom="15dp"
         android:fontFamily="@font/ubunturegular"
         android:text="@string/hourTimes"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:textAlignment="center"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textAlignment="center"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/address3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address2"
+        android:textAlignment="center"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/adress2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adress3"
+        android:textAlignment="center"
         android:textSize="@dimen/info" />
 
     <TextView
         android:id="@+id/socialMedia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
         android:fontFamily="@font/ubunturegular"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/socialMedia"
