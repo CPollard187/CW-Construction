@@ -16,14 +16,26 @@
     <string name="about2">La société propose de nombreux types de métiers spécialisés tels que la toiture, la démolition, le réaménagement, etc.</string>
     <string name="about3">Nous avons terminé des centaines d\'emplois dans la région de Windsor, en Ontario et dans les régions avoisinantes.</string>
     <string name="quoteTitle">Demander un devis</string>
-    <string name="material">Type de materiau</string>
     <string name="problem">Problème</string>
     <string name="Description">La description</string>
-    <string name="Date">Date de disponibilité</string>
+    <string name="Date">Disponibilité</string>
     <string name="switch_summary">Activer ou désactiver cette option</string>
     <string name="switch_title">Commutateur de paramètres</string>
     <string name="change_lang">Vous avez choisi le français comme langue par défaut</string>
     <string name="French">Français</string>
     <string name="English">Anglais</string>
+    <string name="Other" translatable="false">Autre</string>
+    <string name="personName">Nom</string>
+    <string name="credits">Crédits</string>
+    <string name="fontUsed">Police de caractère</string>
+    <string name="developers">Développeurs</string>
+    <string name="location">Emplacement</string>
+    <string name="length">Longueur</string>
+    <string name="width">Largeur</string>
+    <string name="luxury">Luxe</string>
+    <string name="remodel">Remodeler</string>
+    <string name="additionalInformation">Information Additionnelle</string>
+    <string name="material">Matériel</string>
+    <string name="area">Aire</string>
 
 </resources>
