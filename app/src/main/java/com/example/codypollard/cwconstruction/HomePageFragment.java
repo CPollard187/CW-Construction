@@ -136,7 +136,7 @@ public class HomePageFragment extends Fragment {
         twitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri web = Uri.parse("https://twitter.com/ConstructCW");
+                Uri web = Uri.parse("https://twitter.com/Construct_CW");
                 Intent intent = new Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);

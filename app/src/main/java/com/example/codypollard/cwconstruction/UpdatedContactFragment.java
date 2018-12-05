@@ -75,7 +75,7 @@ public class UpdatedContactFragment extends Fragment {
         ArrayList<Contact> contacts = new ArrayList<>();
 
         contacts.add(new Contact(R.drawable.pollard, "Cody", "Pollard", "Manager",  "519-123-4567", "cody.pollard01@stclairconnect.ca"));
-        contacts.add(new Contact(R.drawable.pollard, "Wilson", "Paz", "Manager", "519-123-4567",  "wilson.paz01@stclairconnect.ca"));
+        contacts.add(new Contact(R.drawable.paz, "Wilson", "Paz", "Manager", "519-123-4567",  "wilson.paz01@stclairconnect.ca"));
         ContactRecyclerViewAdapter adapter = new ContactRecyclerViewAdapter(contacts, getContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

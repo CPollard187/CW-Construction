@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:text="@string/credits"
         android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
         android:textColor="@color/vpi__background_holo_dark"
         android:textSize="@dimen/titles"
         android:textStyle="bold" />
@@ -23,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/imagesUsed"
+        android:fontFamily="@font/ubunturegular"
         android:paddingTop="5dp"
         android:textAlignment="center"
         android:textSize="@dimen/subTitles"
@@ -32,8 +34,11 @@
         android:id="@+id/image1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
         android:text="https://pixabay.com/en/architecture-family-house-front-yard-1836070/"
         android:textAlignment="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textColor="@color/default_line_indicator_selected_color"
         android:textSize="@dimen/info"
         android:textStyle="italic" />
@@ -42,8 +47,11 @@
         android:id="@+id/image2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
         android:text="https://pixabay.com/en/kitchen-home-interior-modern-room-2165756/"
         android:textAlignment="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textColor="@color/default_line_indicator_selected_color"
         android:textSize="@dimen/info"
         android:textStyle="italic" />
@@ -51,9 +59,12 @@
     <TextView
         android:id="@+id/image3"
         android:layout_width="match_parent"
+        android:fontFamily="@font/ubunturegular"
         android:layout_height="wrap_content"
         android:text="https://pixabay.com/en/window-house-home-house-window-1800575/"
         android:textAlignment="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textColor="@color/default_line_indicator_selected_color"
         android:textSize="@dimen/info"
         android:textStyle="italic" />
@@ -62,8 +73,11 @@
         android:id="@+id/images4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
         android:text="https://pixabay.com/en/remodeling-kitchen-remodel-1241040/"
         android:textAlignment="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textColor="@color/default_line_indicator_selected_color"
         android:textSize="@dimen/info"
         android:textStyle="italic" />
@@ -72,6 +86,9 @@
         android:id="@+id/image5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:text="https://pixabay.com/en/home-covered-porch-picket-fence-2119484/"
         android:textAlignment="center"
         android:textColor="@color/default_line_indicator_selected_color"
@@ -84,6 +101,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:text="@string/fontUsed"
+        android:fontFamily="@font/ubunturegular"
         android:textAlignment="center"
         android:textSize="@dimen/subTitles"
         android:textStyle="bold" />
@@ -96,6 +114,7 @@
         android:textAlignment="center"
         android:textColor="@color/default_line_indicator_selected_color"
         android:textSize="@dimen/info"
+        android:fontFamily="@font/ubunturegular"
         android:textStyle="italic" />
 
     <TextView
@@ -106,6 +125,7 @@
         android:textAlignment="center"
         android:paddingTop="10dp"
         android:textSize="@dimen/subTitles"
+        android:fontFamily="@font/ubunturegular"
         android:textStyle="bold" />
 
     <TextView
@@ -114,6 +134,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cody"
         android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
         android:textSize="@dimen/info" />
 
     <TextView
@@ -121,6 +142,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/wilson"
+        android:fontFamily="@font/ubunturegular"
         android:textAlignment="center"
         android:textSize="@dimen/info" />
 </LinearLayout>
