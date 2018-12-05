@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">CW Construction</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -43,6 +42,9 @@
     <string name="Date">Date Available</string>
     <string name="switch_title">Settings switch</string>
     <string name="switch_summary">Enable or disable this option</string>
-
+    <string name="app_name">"CW Construction   "</string>
+    <string name="change_lang">You have chosen English as your default language</string>
+    <string name="French">French</string>
+    <string name="English">English</string>
 
 </resources>
