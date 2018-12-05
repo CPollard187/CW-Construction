@@ -80,7 +80,7 @@ public class HomePageFragment extends Fragment {
         twitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri web = Uri.parse("https://twitter.com/");
+                Uri web = Uri.parse("https://twitter.com/ConstructCW");
                 Intent intent = new Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
@@ -97,7 +97,7 @@ public class HomePageFragment extends Fragment {
         faceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri web = Uri.parse("https://www.facebook.com/");
+                Uri web = Uri.parse("https://www.facebook.com/ConstructionCW");
                 Intent intent = new Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
@@ -114,7 +114,7 @@ public class HomePageFragment extends Fragment {
         instaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri web = Uri.parse("https://www.instagram.com/");
+                Uri web = Uri.parse("https://www.instagram.com/cw.construction");
                 Intent intent = new Intent(Intent.ACTION_VIEW, web);
                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
