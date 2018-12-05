@@ -45,6 +45,15 @@
     <string name="switch_summary">Enable or disable this option</string>
     <string name="Other">Other</string>
     <string name="personName">Full Name</string>
+    <string name="credits">Credits</string>
+    <string name="imagesUsed">Images</string>
+    <string name="fontUsed">Font</string>
+    <string name="developers">Developers</string>
+    <string name="ubuntu">Ubuntu</string>
+    <string name="location">Location</string>
+    <string name="address">11 Pollzap St</string>
+    <string name="address2">Windsor, ON</string>
+    <string name="adress3">N8X 4G3, Canada</string>
 
 
 </resources>

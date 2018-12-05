@@ -8,6 +8,7 @@
     <dimen name="subTitles">28dp</dimen>
     <dimen name="titles">32dp</dimen>
     <dimen name="info">20dp</dimen>
+    <dimen name="feet">18sp</dimen>
 
 
 </resources>

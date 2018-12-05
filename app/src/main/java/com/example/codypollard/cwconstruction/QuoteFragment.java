@@ -136,26 +136,48 @@ public class QuoteFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_quote, container, false);
-        final EditText length = (EditText) view.findViewById(R.id.lengthBox);
-        final EditText width = (EditText) view.findViewById(R.id.widthBox);
-        final EditText problem = (EditText) view.findViewById(R.id.problemBox);
-        final EditText material = (EditText) view.findViewById(R.id.materialBox);
-        final EditText date = (EditText) view.findViewById(R.id.dateBox);
-        final EditText desc = (EditText) view.findViewById(R.id.descBox);
-        final EditText name = (EditText) view.findViewById(R.id.nameBox);
+
+        final EditText lengthText = (EditText) view.findViewById(R.id.lengthBox);
+        //final String length = lengthText.getText().toString();
+
+        final EditText widthText = (EditText) view.findViewById(R.id.widthBox);
+        //final String width = widthText.getText().toString();
+
+        final EditText problemText = (EditText) view.findViewById(R.id.problemBox);
+        //final String problem = problemText.getText().toString();
+
+        final EditText materialText = (EditText) view.findViewById(R.id.materialBox);
+        //final String material = materialText.getText().toString();
+
+        final EditText dateText = (EditText) view.findViewById(R.id.dateBox);
+        //final String date = dateText.getText().toString();
+
+        final EditText descText = (EditText) view.findViewById(R.id.descBox);
+        //final String desc = descText.getText().toString();
+
+        final EditText nameText = (EditText) view.findViewById(R.id.nameBox);
+        //final String name = nameText.getText().toString();
+
         Button email = (Button) view.findViewById(R.id.sendEmailButton);
 
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final String width = widthText.getText().toString();
+                final String length = lengthText.getText().toString();
+                final String name = nameText.getText().toString();
+                final String problem = problemText.getText().toString();
+                final String material = materialText.getText().toString();
+                final String date = dateText.getText().toString();
+                final String desc = descText.getText().toString();
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:"));
-                intent.putExtra(Intent.EXTRA_EMAIL, "cwconstruction@hotmail.com");
+                intent.setData(Uri.parse("mailto: cwconstruct@outlook.com"));
+                intent.putExtra(Intent.EXTRA_EMAIL, "cwconstruct@outlook.com");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Quote Request");
                 intent.putExtra(Intent.EXTRA_TEXT, "Hello, I'm " + name + " and I'm requesting a quote from your app 'CW Construction'. I have a "
                                                             + problem + " that needs to be done. It is a " + length + " by " + width
                                                             + " foot area. I would like the material used to be " + material + ". "
-                                                            + "I'm available " + date + " Additional Instructions: " + desc + " Thank you!");
+                                                            + "I'm available - " + date + ". Additional Instructions: " + desc + ". Thank you!");
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }

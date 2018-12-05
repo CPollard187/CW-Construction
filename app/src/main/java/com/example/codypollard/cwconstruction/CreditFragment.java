@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,12 +16,12 @@ import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link HomePageFragment.OnFragmentInteractionListener} interface
+ * {@link CreditFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link HomePageFragment#newInstance} factory method to
+ * Use the {@link CreditFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomePageFragment extends Fragment {
+public class CreditFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,12 +31,9 @@ public class HomePageFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-
-    //ImageButton twitButton;
-
     private OnFragmentInteractionListener mListener;
 
-    public HomePageFragment() {
+    public CreditFragment() {
         // Required empty public constructor
     }
 
@@ -47,11 +43,11 @@ public class HomePageFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomePageFragment.
+     * @return A new instance of fragment CreditFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomePageFragment newInstance(String param1, String param2) {
-        HomePageFragment fragment = new HomePageFragment();
+    public static CreditFragment newInstance(String param1, String param2) {
+        CreditFragment fragment = new CreditFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -72,71 +68,13 @@ public class HomePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home_page, container, false);
-        ImageView twitButton = (ImageView) view.findViewById(R.id.twitButton);
-        ImageView faceButton = (ImageView) view.findViewById(R.id.faceButton);
-        ImageView instaButton = (ImageView) view.findViewById(R.id.instaButton);
-        TextView address = (TextView) view.findViewById(R.id.address);
-        TextView address2 = (TextView) view.findViewById(R.id.adress2);
-        TextView address3 = (TextView) view.findViewById(R.id.address3);
+        View view = inflater.inflate(R.layout.fragment_credit, container, false);
 
-        address.setOnClickListener(new View.OnClickListener() {
+        TextView image1 = (TextView) view.findViewById(R.id.image1);
+        image1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(geoLocation);
-                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-                    startActivity(intent);
-                }
-                else{
-                    Toast.makeText(getContext(),
-                            "Incorrect software",
-                            Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
-        address3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(geoLocation);
-                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-                    startActivity(intent);
-                }
-                else{
-                    Toast.makeText(getContext(),
-                            "Incorrect software",
-                            Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
-        address2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(geoLocation);
-                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
-                    startActivity(intent);
-                }
-                else{
-                    Toast.makeText(getContext(),
-                            "Incorrect software",
-                            Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
-
-        //Twitter Button That Will Send you to the twitter website
-        twitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri web = Uri.parse("https://twitter.com/Construct_CW");
+                Uri web = Uri.parse("https://pixabay.com/en/architecture-family-house-front-yard-1836070/");
                 Intent intent = new Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
@@ -148,12 +86,11 @@ public class HomePageFragment extends Fragment {
                 }
             }
         });
-
-        //Facebook Button That Will Send you to the facebook website
-        faceButton.setOnClickListener(new View.OnClickListener() {
+        TextView image2 = (TextView) view.findViewById(R.id.image2);
+        image2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri web = Uri.parse("https://www.facebook.com/ConstructionCW");
+                Uri web = Uri.parse("https://pixabay.com/en/kitchen-home-interior-modern-room-2165756/");
                 Intent intent = new Intent(Intent.ACTION_VIEW, web);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
@@ -165,14 +102,13 @@ public class HomePageFragment extends Fragment {
                 }
             }
         });
-
-//        //Instagram Button That Will Send you to the instagram website
-        instaButton.setOnClickListener(new View.OnClickListener() {
+        TextView image3 = (TextView) view.findViewById(R.id.image3);
+        image3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri web = Uri.parse("https://www.instagram.com/cw.construction");
+                Uri web = Uri.parse("https://pixabay.com/en/window-house-home-house-window-1800575/");
                 Intent intent = new Intent(Intent.ACTION_VIEW, web);
-               if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }
                 else{
@@ -182,9 +118,55 @@ public class HomePageFragment extends Fragment {
                 }
             }
         });
-
+        TextView image4 = (TextView) view.findViewById(R.id.images4);
+        image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://pixabay.com/en/remodeling-kitchen-remodel-1241040/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        TextView image5 = (TextView) view.findViewById(R.id.image5);
+        image5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://pixabay.com/en/home-covered-porch-picket-fence-2119484/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        TextView font = (TextView) view.findViewById(R.id.ubuntu);
+        font.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://fonts.google.com/specimen/Ubuntu");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         return view;
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event

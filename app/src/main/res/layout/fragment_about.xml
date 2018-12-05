@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:text="@string/titleAbout"
         android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
+
         android:textColor="@color/vpi__background_holo_dark"
         android:textSize="@dimen/titles"
         android:textStyle="bold" />
@@ -23,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:fontFamily="@font/ubunturegular"
+
         android:text="@string/about1"
         android:textAlignment="center"
         android:textSize="@dimen/info" />
@@ -32,6 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:fontFamily="@font/ubunturegular"
+
         android:text="@string/about2"
         android:textAlignment="center"
         android:textSize="@dimen/info" />
@@ -41,6 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:fontFamily="@font/ubunturegular"
+
         android:text="@string/about3"
         android:textAlignment="center"
         android:textSize="@dimen/info" />
