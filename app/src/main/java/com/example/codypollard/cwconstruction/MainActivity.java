@@ -91,20 +91,31 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         FragmentTransaction transaction = fm.beginTransaction();
 
+
         if (id == R.id.nav_home) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                                            R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new HomePageFragment(), "Home");
             transaction.commit();
         } else if (id == R.id.nav_about) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new AboutFragment(), "About");
             transaction.commit();
         } else if (id == R.id.nav_ourwork) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new OurWorkFragment(), "Our Work");
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (id == R.id.nav_quote) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new QuoteFragment(), "Quote");
             transaction.commit();
         } else if (id == R.id.nav_contact) {
+            transaction.setCustomAnimations(R.anim.anim_in, R.anim.anim_out,
+                    R.anim.anim_back_in, R.anim.anim_back_out);
             transaction.replace(R.id.content, new UpdatedContactFragment(), "Contact");
             transaction.commit();
         }
