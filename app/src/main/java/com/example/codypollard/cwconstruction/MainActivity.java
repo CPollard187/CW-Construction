@@ -1,6 +1,8 @@
 package com.example.codypollard.cwconstruction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +19,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -28,12 +33,27 @@ public class MainActivity extends AppCompatActivity
         UpdatedContactFragment.OnFragmentInteractionListener,
         CreditFragment.OnFragmentInteractionListener{
 
+
     FragmentManager fm = getSupportFragmentManager();
+
+    private static final String STORED_LANG = "stored_lang";
+    private static final String DEFAULT_LANG = "default_lang";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLanguage();
         setContentView(R.layout.activity_main);
+
+//        TextView currentLang = (TextView) findViewById(R.id.currentLang);
+//
+//        if (getLangCode().contentEquals("en")) {
+//            currentLang.setText("English");
+//        } else if (getLangCode().contentEquals("fr")) {
+//            // default
+//            currentLang.setText("French");
+//        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -50,6 +70,44 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+    private void saveLanguage(String lang) {
+
+
+        // we can use this method to save language
+        SharedPreferences preferences = getSharedPreferences(STORED_LANG, MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(DEFAULT_LANG, lang);
+        editor.apply();
+        // we have saved
+        // recreate activity after saving to load the new language, this is the same
+        // as refreshing activity to load new language
+
+        recreate();
+
+    }
+
+    private void loadLanguage() {
+        // we can use this method to load language,
+        // this method should be called before setContentView() method of the onCreate method
+
+        Locale locale = new Locale(getLangCode());
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+    }
+
+    private String getLangCode() {
+        SharedPreferences preferences = getSharedPreferences(STORED_LANG, MODE_PRIVATE);
+        String langCode = preferences.getString(DEFAULT_LANG, "en");
+        // save english 'en' as the default language
+        return langCode;
+    }
+
+
+
+
 
     @Override
     public void onBackPressed() {
@@ -70,17 +128,32 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
+
         int id = item.getItemId();
 
+
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, SettingsActivity.class);
-            startActivity(intent);
+//        if (id == R.id.action_settings) {
+//            Intent intent = new Intent(this, SettingsActivity.class);
+//            startActivity(intent);
+//            return true;
+//        }
+
+        if (id == R.id.action_english){
+            saveLanguage("en");
             return true;
         }
+
+        if (id == R.id.action_french){
+            saveLanguage("fr");
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
