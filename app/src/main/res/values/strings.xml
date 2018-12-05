@@ -1,9 +1,9 @@
 <resources>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="companyName">CW Construction</string>
@@ -30,7 +30,7 @@
     <string name="cody">Cody Pollard</string>
     <string name="wilson">Wilson Paz</string>
     <string name="role">Manager</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="titleAbout">About CW Construction</string>
     <string name="about1">Privately owned company that was founded in 2012 by owners Cody and Wilson</string>
     <string name="about2">The company offers many types of skilled trades such as roofing, demolition, remodeling and so on</string>
@@ -51,15 +51,20 @@
     <string name="Other">Other</string>
     <string name="personName">Full Name</string>
     <string name="credits">Credits</string>
-    <string name="imagesUsed">Images</string>
+    <string name="imagesUsed" translatable="false">Images</string>
     <string name="fontUsed">Font</string>
     <string name="developers">Developers</string>
-    <string name="ubuntu">Ubuntu</string>
+    <string name="ubuntu" translatable="false">Ubuntu</string>
     <string name="location">Location</string>
-    <string name="address">11 Pollzap St</string>
-    <string name="address2">Windsor, ON</string>
-    <string name="adress3">N8X 4G3, Canada</string>
-
+    <string name="address" translatable="false">11 Pollzap St</string>
+    <string name="address2" translatable="false">Windsor, ON</string>
+    <string name="adress3" translatable="false">N8X 4G3, Canada</string>
+    <string name="length">Length</string>
+    <string name="width">Width</string>
+    <string name="luxury">Luxury</string>
+    <string name="remodel">Remodel</string>
+    <string name="additionalInformation">Additional Information</string>
+    <string name="area">Area</string>
 
 
 </resources>

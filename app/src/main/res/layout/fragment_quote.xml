@@ -116,7 +116,7 @@
         android:gravity="center_vertical|center_horizontal"
         android:padding="15dp"
 
-        android:text="Area"
+        android:text="@string/area"
         android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -142,10 +142,10 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="125dp"
         android:ems="10"
-        android:gravity="center"
-        android:hint="Length"
-        android:inputType="text"
         android:fontFamily="@font/ubunturegular"
+        android:gravity="center"
+        android:hint="@string/length"
+        android:inputType="text"
 
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,10 +158,10 @@
         android:layout_marginStart="220dp"
         android:layout_marginTop="125dp"
         android:ems="10"
-        android:gravity="center"
-        android:hint="Width"
-        android:inputType="text"
         android:fontFamily="@font/ubunturegular"
+        android:gravity="center"
+        android:hint="@string/width"
+        android:inputType="text"
 
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +190,7 @@
         android:ems="10"
         android:fontFamily="@font/ubunturegular"
         android:gravity="center"
-        android:hint="Luxury"
+        android:hint="@string/luxury"
 
         android:inputType="text"
         android:padding="15dp"
@@ -218,11 +218,11 @@
         android:layout_marginStart="160dp"
         android:layout_marginTop="242dp"
         android:ems="10"
+        android:fontFamily="@font/ubunturegular"
         android:gravity="center"
-        android:hint="Remodel"
+        android:hint="@string/remodel"
         android:inputType="text"
         android:padding="15dp"
-        android:fontFamily="@font/ubunturegular"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -279,7 +279,7 @@
         android:fontFamily="@font/ubunturegular"
 
         android:gravity="center"
-        android:hint="Additional Information"
+        android:hint="@string/additionalInformation"
         android:inputType="text"
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
