@@ -150,6 +150,24 @@ public class CreditFragment extends Fragment {
                 }
             }
         });
+
+        TextView image6 = (TextView) view.findViewById(R.id.image6);
+        image5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://pixabay.com/en/trophy-award-winner-prize-cup-2754166/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
         TextView font = (TextView) view.findViewById(R.id.ubuntu);
         font.setOnClickListener(new View.OnClickListener() {
             @Override
