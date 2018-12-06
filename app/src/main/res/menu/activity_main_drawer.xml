@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about_24dp"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_ourwork"
+            android:icon="@drawable/ourwork_24dp"
+            android:title="Our Work" />
+        <item
+            android:id="@+id/nav_quote"
+            android:icon="@drawable/quote_24dp"
+            android:title="Request A Quote" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contact_24dp"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/nav_credits"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Credits" />
+    </group>
+</menu>

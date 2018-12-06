@@ -3,10 +3,22 @@ package com.example.codypollard.cwconstruction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.example.codypollard.cwconstruction.JavaBean.awardType;
+
+import java.util.ArrayList;
+
 
 
 /**
@@ -16,7 +28,6 @@ import android.view.ViewGroup;
  * to handle interaction events.
  * Use the {@link AboutFragment#newInstance} factory method to
  * create an instance of this fragment.
- *
  */
 public class AboutFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -27,8 +38,14 @@ public class AboutFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    ListView list;
+    TextView awardText;
 
     private OnFragmentInteractionListener mListener;
+
+    public AboutFragment() {
+        // Required empty public constructor
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -47,9 +64,6 @@ public class AboutFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-    public AboutFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,12 +75,65 @@ public class AboutFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about, container, false);
+        View view = inflater.inflate(R.layout.fragment_about, container, false);
+
+        list = (ListView) view.findViewById(R.id.awardListView);
+        awardText = view.findViewById(R.id.awardText);
+
+        ArrayList<awardType> awardList = new ArrayList<awardType>();
+        awardList.add(new awardType("2015 Award", "Windsor's 2015 #1 Construction Team"));
+        awardList.add(new awardType("2017 Award", "Windsor's 2017 #1 Construction Team"));
+        awardList.add(new awardType("2018 Award", "Windsor's 2018 #1 Construction Team"));
+
+        CustomAdapter adapter = new CustomAdapter(getContext(), awardList);
+        list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                awardType currentItem = (awardType)list.getItemAtPosition(position);
+                awardText.setText(currentItem.getDefinition());
+            }
+        });
+
+        return view;
     }
 
+    public class CustomAdapter extends ArrayAdapter<awardType> {
+
+        public CustomAdapter(Context context, ArrayList<awardType> items){
+            super(context, 0, items);
+        }
+
+        //We override the getView method so that we can provide our own view
+        //for each item in the list
+        @NonNull
+        @Override
+        public View getView(int position,
+                            @Nullable View convertView,
+                            @NonNull ViewGroup parent) {
+            //if it does nothave a view we provide it with one
+            if(convertView == null){
+                //provide the item with the custom view we made
+                convertView = LayoutInflater.from(getContext())
+                        .inflate(R.layout.item_view, parent, false);
+            }
+            TextView name = convertView.findViewById(R.id.name);
+            awardType item = getItem(position);
+            name.setText(item.getName());
+            ImageView imageView =
+                    convertView.findViewById(R.id.image);
+//            imageView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    System.out.println("ImageView: I was clicked" + item.getDefinition());
+//                }
+//            });
+            return convertView;
+        }
+    }
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

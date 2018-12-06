@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/aboutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
+        android:text="@string/titleAbout"
+
+        android:textAlignment="center"
+        android:textColor="@color/vpi__background_holo_dark"
+        android:textSize="@dimen/titles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/aboutTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+
+        android:fontFamily="@font/ubunturegular"
+        android:padding="10dp"
+        android:text="@string/about1"
+        android:textAlignment="center"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/aboutTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+
+        android:fontFamily="@font/ubunturegular"
+        android:padding="10dp"
+        android:text="@string/about2"
+        android:textAlignment="center"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/aboutTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+
+        android:fontFamily="@font/ubunturegular"
+        android:padding="10dp"
+        android:text="@string/about3"
+        android:textAlignment="center"
+        android:textSize="@dimen/info" />
+
+    <ListView
+        android:id="@+id/awardListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_weight="1.70"></ListView>
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.10">
+
+        <TextView
+            android:id="@+id/awardText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:textSize="18sp" />
+    </ScrollView>
+
+
+
+
+</LinearLayout>

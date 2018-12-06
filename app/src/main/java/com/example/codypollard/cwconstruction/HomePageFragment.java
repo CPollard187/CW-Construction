@@ -1,12 +1,17 @@
 package com.example.codypollard.cwconstruction;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -26,6 +31,9 @@ public class HomePageFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
+    //ImageButton twitButton;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +72,119 @@ public class HomePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_page, container, false);
+        View view = inflater.inflate(R.layout.fragment_home_page, container, false);
+        ImageView twitButton = (ImageView) view.findViewById(R.id.twitButton);
+        ImageView faceButton = (ImageView) view.findViewById(R.id.faceButton);
+        ImageView instaButton = (ImageView) view.findViewById(R.id.instaButton);
+        TextView address = (TextView) view.findViewById(R.id.address);
+        TextView address2 = (TextView) view.findViewById(R.id.adress2);
+        TextView address3 = (TextView) view.findViewById(R.id.address3);
+
+        address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        address3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        address2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.272495, -82.997107(CW Offices)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        //Twitter Button That Will Send you to the twitter website
+        twitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://twitter.com/Construct_CW");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //Facebook Button That Will Send you to the facebook website
+        faceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://www.facebook.com/ConstructionCW");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+//        //Instagram Button That Will Send you to the instagram website
+        instaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri web = Uri.parse("https://www.instagram.com/cw.construction");
+                Intent intent = new Intent(Intent.ACTION_VIEW, web);
+               if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getContext(),
+                            "Incorrect software",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        return view;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

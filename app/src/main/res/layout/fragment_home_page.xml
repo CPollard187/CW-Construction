@@ -1,14 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomePageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/companyName"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/titles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/blurb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="15dp"
+        android:fontFamily="@font/ubunturegular"
+        android:text="@string/companyBlurb"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/hours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/hours"
+        android:fontFamily="@font/ubunturegular"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hourTimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="15dp"
+        android:fontFamily="@font/ubunturegular"
+        android:text="@string/hourTimes"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:fontFamily="@font/ubunturegular"
+        android:textAlignment="center"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/address3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address2"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/adress2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adress3"
+        android:textAlignment="center"
+        android:fontFamily="@font/ubunturegular"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info" />
+
+    <TextView
+        android:id="@+id/socialMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/ubunturegular"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/socialMedia"
+        android:textSize="@dimen/subTitles"
+        android:textStyle="bold" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/twitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="75dp"
+            android:maxHeight="75dp"
+            android:paddingRight="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitter" />
+
+        <ImageView
+            android:id="@+id/instaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:maxWidth="75dp"
+            android:maxHeight="75dp"
+            android:paddingRight="30dp"
+            android:src="@drawable/instagram" />
+
+        <ImageView
+            android:id="@+id/faceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="45dp"
+            android:maxHeight="45dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/facebook" />
+    </LinearLayout>
+
+</LinearLayout>

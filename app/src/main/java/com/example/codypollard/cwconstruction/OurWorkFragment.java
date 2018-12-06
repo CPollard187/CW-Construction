@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,12 @@ public class OurWorkFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    //Declare view pager
+    ViewPager viewPager;
+    //put the images into an array list
+    int images[] = {R.drawable.house2, R.drawable.kitchen, R.drawable.bathroom, R.drawable.roof, R.drawable.home};
+    MyCustomPagerAdapter myCustomPagerAdapter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -64,7 +71,14 @@ public class OurWorkFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_our_work, container, false);
+        View view = inflater.inflate(R.layout.fragment_our_work, container, false);
+        //Get the viewpager
+        viewPager = (ViewPager)view.findViewById(R.id.viewPager);
+        //get the adapter and set it to the view pager
+        myCustomPagerAdapter = new MyCustomPagerAdapter(getContext(), images);
+        viewPager.setAdapter(myCustomPagerAdapter);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
