@@ -83,12 +83,10 @@ public class AboutFragment extends Fragment {
         awardText = view.findViewById(R.id.awardText);
 
         ArrayList<awardType> awardList = new ArrayList<awardType>();
-        awardList.add(new awardType("2015 Award", "Voted as Windsor's #1 Construction Team"));
-        awardList.add(new awardType("2017 Award", "Voted as Windsor's #1 Construction Team"));
-        awardList.add(new awardType("2018 Award", "Voted as Windsor's #1 Construction Team"));
-        //Method 1) use a pre-made list view adapter
-//        ArrayAdapter adapter = new ArrayAdapter(getContext(),
-//                android.R.layout.simple_list_item_1, dataTypeList);
+        awardList.add(new awardType("2015 Award", "Windsor's 2015 #1 Construction Team"));
+        awardList.add(new awardType("2017 Award", "Windsor's 2017 #1 Construction Team"));
+        awardList.add(new awardType("2018 Award", "Windsor's 2018 #1 Construction Team"));
+
         CustomAdapter adapter = new CustomAdapter(getContext(), awardList);
         list.setAdapter(adapter);
 
@@ -116,8 +114,7 @@ public class AboutFragment extends Fragment {
         public View getView(int position,
                             @Nullable View convertView,
                             @NonNull ViewGroup parent) {
-            //We do this by checking if the item already has a view
-            //and if it does not we provide it with one
+            //if it does nothave a view we provide it with one
             if(convertView == null){
                 //provide the item with the custom view we made
                 convertView = LayoutInflater.from(getContext())

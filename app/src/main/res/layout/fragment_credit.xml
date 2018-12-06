@@ -96,6 +96,19 @@
         android:textStyle="italic" />
 
     <TextView
+        android:id="@+id/image6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubunturegular"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="https://pixabay.com/en/trophy-award-winner-prize-cup-2754166/"
+        android:textAlignment="center"
+        android:textColor="@color/default_line_indicator_selected_color"
+        android:textSize="@dimen/info"
+        android:textStyle="italic" />
+
+    <TextView
         android:id="@+id/font"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
