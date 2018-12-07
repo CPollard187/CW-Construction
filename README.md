@@ -13,7 +13,7 @@ On the Home Page you can go to each of our Social Media Links and also go to our
 ## -About Page-
 On the About Page you can read about our history and achievements we have earned over the years.
 ## -OurWork Page-
-On the Work Page you can see some of what our company has build
+On the Work Page you can see some of our company's work and projects completed
 ## -Quote Page-
 On the Quote Page you go through each field to specify what you need for the quote. After you fill all of the fields you submit the quote and it sends us an email.
 ## -Contact Page-
