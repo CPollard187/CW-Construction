@@ -34,7 +34,19 @@ for translations we used google translate
 https://translate.google.ca/
 
 ## -Image Resources-
+https://pixabay.com/en/remodeling-kitchen-remodel-1241040/
+https://pixabay.com/en/window-house-home-house-window-1800575/
+https://pixabay.com/en/kitchen-home-interior-modern-room-2165756/
+https://pixabay.com/en/architecture-family-house-front-yard-1836070/
+https://pixabay.com/en/home-covered-porch-picket-fence-2119484/
+https://pixabay.com/en/trophy-award-winner-prize-cup-2754166/
 
+## -Font-
+https://fonts.google.com/specimen/Ubuntu
+
+## -Developers-
+Cody Pollard
+Wilson Paz
 
 
 
