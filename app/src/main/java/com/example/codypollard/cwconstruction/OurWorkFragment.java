@@ -27,7 +27,7 @@ public class OurWorkFragment extends Fragment {
     //Declare view pager
     ViewPager viewPager;
     //put the images into an array list
-    int images[] = {R.drawable.house2, R.drawable.kitchen, R.drawable.bathroom, R.drawable.roof, R.drawable.home};
+    int images[] = {R.drawable.house2, R.drawable.kitchen, R.drawable.bathroom, R.drawable.home, R.drawable.roof};
     MyCustomPagerAdapter myCustomPagerAdapter;
 
     // TODO: Rename and change types of parameters
