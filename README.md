@@ -30,7 +30,7 @@ On the Credits Page you see who has developed the project, font used and images 
 # Sources
 ## -Translatations-
 for translations we used google translate
-(powered by google's engine)
+(powered by Google's engine, all rights reserved to Google)
 https://translate.google.ca/
 
 ## -Image Resources-
