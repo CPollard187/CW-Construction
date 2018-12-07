@@ -5,7 +5,7 @@ The CW Construction app is used to request a quote for the user via email. Also 
 # Getting Started
 To utilize this application you must have:
 - Android Device
-- CW Construction Application
+- CW Construction Application installed
 
 # How to use
 ## -Home Page-
